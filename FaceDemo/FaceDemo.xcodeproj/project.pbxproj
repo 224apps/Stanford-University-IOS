@@ -13,6 +13,7 @@
 		49AC4EC01D132651006C0BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AC4EBF1D132651006C0BB8 /* Assets.xcassets */; };
 		49AC4EC31D132651006C0BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AC4EC11D132651006C0BB8 /* LaunchScreen.storyboard */; };
 		49AC4ECE1D1326BD006C0BB8 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC4ECD1D1326BD006C0BB8 /* FaceView.swift */; };
+		49C7560D1EDACB2B0009F781 /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C7560C1EDACB2B0009F781 /* FacialExpression.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		49AC4EC21D132651006C0BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49AC4EC41D132651006C0BB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49AC4ECD1D1326BD006C0BB8 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FaceView.swift; path = ../FaceView.swift; sourceTree = "<group>"; };
+		49C7560C1EDACB2B0009F781 /* FacialExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				49AC4ECD1D1326BD006C0BB8 /* FaceView.swift */,
 				49AC4EB81D132651006C0BB8 /* AppDelegate.swift */,
+				49C7560C1EDACB2B0009F781 /* FacialExpression.swift */,
 				49AC4EBA1D132651006C0BB8 /* ViewController.swift */,
 				49AC4EBC1D132651006C0BB8 /* Main.storyboard */,
 				49AC4ECA1D13265A006C0BB8 /* Supporting files */,
@@ -102,7 +105,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Abdoulaye Diallo";
 				TargetAttributes = {
 					49AC4EB41D132651006C0BB8 = {
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49AC4EBB1D132651006C0BB8 /* ViewController.swift in Sources */,
+				49C7560D1EDACB2B0009F781 /* FacialExpression.swift in Sources */,
 				49AC4EB91D132651006C0BB8 /* AppDelegate.swift in Sources */,
 				49AC4ECE1D1326BD006C0BB8 /* FaceView.swift in Sources */,
 			);
@@ -190,8 +194,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -235,8 +241,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -255,6 +263,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;

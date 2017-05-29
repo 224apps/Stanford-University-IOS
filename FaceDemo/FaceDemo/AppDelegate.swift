@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  FaceDemo
 //
-//  Created by Abdoulaye Diallo on 6/16/16.
+//  Created by Abdoulaye Diallo on 05/28/17.
 //  Copyright © 2016 Abdoulaye Diallo. All rights reserved.
 //
 
