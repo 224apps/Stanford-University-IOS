@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FaceViewController: UIViewController {
     
     @IBOutlet weak var faceView: FaceView! {
         
@@ -30,11 +30,6 @@ class ViewController: UIViewController {
             swipeDownRecognizer.direction = .down
             
             faceView.addGestureRecognizer(swipeDownRecognizer)
-            
-            
-            
-            
-            
             UpdateUI()
         }
     }

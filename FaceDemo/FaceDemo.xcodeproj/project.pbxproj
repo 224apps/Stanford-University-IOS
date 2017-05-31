@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		497B7B301EDD3BD8005CE14D /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497B7B2F1EDD3BD8005CE14D /* EmotionsViewController.swift */; };
 		49AC4EB91D132651006C0BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC4EB81D132651006C0BB8 /* AppDelegate.swift */; };
-		49AC4EBB1D132651006C0BB8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC4EBA1D132651006C0BB8 /* ViewController.swift */; };
+		49AC4EBB1D132651006C0BB8 /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AC4EBA1D132651006C0BB8 /* FaceViewController.swift */; };
 		49AC4EBE1D132651006C0BB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AC4EBC1D132651006C0BB8 /* Main.storyboard */; };
 		49AC4EC01D132651006C0BB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49AC4EBF1D132651006C0BB8 /* Assets.xcassets */; };
 		49AC4EC31D132651006C0BB8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49AC4EC11D132651006C0BB8 /* LaunchScreen.storyboard */; };
@@ -17,9 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		497B7B2F1EDD3BD8005CE14D /* EmotionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 		49AC4EB51D132651006C0BB8 /* FaceDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FaceDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49AC4EB81D132651006C0BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		49AC4EBA1D132651006C0BB8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		49AC4EBA1D132651006C0BB8 /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
 		49AC4EBD1D132651006C0BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49AC4EBF1D132651006C0BB8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49AC4EC21D132651006C0BB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,7 +63,8 @@
 				49AC4ECD1D1326BD006C0BB8 /* FaceView.swift */,
 				49AC4EB81D132651006C0BB8 /* AppDelegate.swift */,
 				49C7560C1EDACB2B0009F781 /* FacialExpression.swift */,
-				49AC4EBA1D132651006C0BB8 /* ViewController.swift */,
+				49AC4EBA1D132651006C0BB8 /* FaceViewController.swift */,
+				497B7B2F1EDD3BD8005CE14D /* EmotionsViewController.swift */,
 				49AC4EBC1D132651006C0BB8 /* Main.storyboard */,
 				49AC4ECA1D13265A006C0BB8 /* Supporting files */,
 			);
@@ -151,8 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49AC4EBB1D132651006C0BB8 /* ViewController.swift in Sources */,
+				49AC4EBB1D132651006C0BB8 /* FaceViewController.swift in Sources */,
 				49C7560D1EDACB2B0009F781 /* FacialExpression.swift in Sources */,
+				497B7B301EDD3BD8005CE14D /* EmotionsViewController.swift in Sources */,
 				49AC4EB91D132651006C0BB8 /* AppDelegate.swift in Sources */,
 				49AC4ECE1D1326BD006C0BB8 /* FaceView.swift in Sources */,
 			);
@@ -278,6 +282,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = self.FaceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -291,6 +296,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = self.FaceDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
