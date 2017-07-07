@@ -10,6 +10,7 @@ import UIKit
 
 class ImageViewController: UIViewController {
     
+    @IBOutlet weak var scrollView: UIScrollView!
     var imageURL: URL? {
         didSet{
             image = nil
@@ -20,8 +21,15 @@ class ImageViewController: UIViewController {
         }
     }
     
+    @IBOutlet weak var spinner: UIActivityIndicatorView! {
+        didSet{
+            
+        }
+    }
+    
     func fetchImage(){
         if let url = imageURL {
+            spinner.startAnimating()
             DispatchQueue.global(qos: .userInitiated).async{ [weak self] in
                 let urlComponents =  try?  Data(contentsOf: url )
                 if let  imageData = urlComponents , url == self?.imageURL {
@@ -37,9 +45,6 @@ class ImageViewController: UIViewController {
         self.view.addSubview(imageView)
     }
     
-    
-    
-    
     private var imageView = UIImageView()
     private var image: UIImage? {
         get{
@@ -48,6 +53,7 @@ class ImageViewController: UIViewController {
         set{
             imageView.image = newValue
             imageView.sizeToFit()
+             spinner.stopAnimating()
         }
     }
     

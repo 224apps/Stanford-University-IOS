@@ -13,6 +13,7 @@
 		493D82811EFA848A00B91780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 493D827F1EFA848A00B91780 /* LaunchScreen.storyboard */; };
 		49BDA3DF1EFAA3C4008FD0AF /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BDA3DE1EFAA3C4008FD0AF /* ImageViewController.swift */; };
 		49BDA3E31EFAA7CE008FD0AF /* DemoURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BDA3E21EFAA7CE008FD0AF /* DemoURL.swift */; };
+		49BDA3E51EFD14A2008FD0AF /* CassiniViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BDA3E41EFD14A2008FD0AF /* CassiniViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		493D82821EFA848A00B91780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		49BDA3DE1EFAA3C4008FD0AF /* ImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
 		49BDA3E21EFAA7CE008FD0AF /* DemoURL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoURL.swift; path = "../../../.Trash/Cassini L7/Cassini/DemoURL.swift"; sourceTree = "<group>"; };
+		49BDA3E41EFD14A2008FD0AF /* CassiniViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CassiniViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				493D82761EFA848A00B91780 /* AppDelegate.swift */,
 				49BDA3DE1EFAA3C4008FD0AF /* ImageViewController.swift */,
+				49BDA3E41EFD14A2008FD0AF /* CassiniViewController.swift */,
 				493D827A1EFA848A00B91780 /* Main.storyboard */,
 				49BDA3E21EFAA7CE008FD0AF /* DemoURL.swift */,
 				493D827D1EFA848A00B91780 /* Assets.xcassets */,
@@ -143,6 +146,7 @@
 				49BDA3DF1EFAA3C4008FD0AF /* ImageViewController.swift in Sources */,
 				493D82771EFA848A00B91780 /* AppDelegate.swift in Sources */,
 				49BDA3E31EFAA7CE008FD0AF /* DemoURL.swift in Sources */,
+				49BDA3E51EFD14A2008FD0AF /* CassiniViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
