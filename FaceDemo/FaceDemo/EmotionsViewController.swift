@@ -27,6 +27,7 @@ class EmotionsViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+         print("Memory did receive memory warning")
     }
     
     
@@ -34,7 +35,6 @@ class EmotionsViewController: UIViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
         var destinationViewController = segue.destination
         if let navigationController = destinationViewController as? UINavigationController{
              destinationViewController = navigationController.visibleViewController ??  destinationViewController
