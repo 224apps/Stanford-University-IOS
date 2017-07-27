@@ -7,56 +7,49 @@
 //
 
 import UIKit
+import Twitter
+
 
 class TweetTableViewController: UITableViewController {
     
-    private var tweets = [Array<Tweet>]()
+    fileprivate var tweets = [Array<Twitter.tweet>]()
     
-    private searchText : String {
-    didSet{
-        tweets.removeAll()
-        tableView.reloadData()
-        searchForTweets()
-        title = searchText
+    private var  searchText : String = "" {
+        didSet{
+            tweets.removeAll()
+            tableView.reloadData()
+             searchForTweets()
+            title = searchText
+        }
     }
     
-    private func searchForTweets(){
-    
-    
-    }
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-    searchText = "#stanford"
+        searchText = "#stanford"
         
     }
-
     
     
+    // MARK: - Private Tweets.
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-
+    func searchForTweets()  {
+        
+        
+        
+        
+    }
     // MARK: - Table view data source
-
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 0
     }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
     
-
+    
 }
