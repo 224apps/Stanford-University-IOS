@@ -10,17 +10,18 @@ import UIKit
 
 class ViewController: UIViewController
 {
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2 )
+    private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairedCards )
+    
+    public var numberOfPairedCards: Int {
+        return (cardButtons.count + 1) / 2
+    }
     
     var flipCount = 0 { didSet{ flipCountLabel.text = "Flips:\(flipCount)" } }
-    
     @IBOutlet var cardButtons: [UIButton]!
     
+    @IBOutlet weak  private var flipCountLabel: UILabel!
     
-    @IBOutlet weak var flipCountLabel: UILabel!
-    
-    
-    @IBAction func touchCard(_ sender:UIButton) {
+    @IBAction private func touchCard(_ sender:UIButton) {
         flipCount += 1
         if let cardNumber = cardButtons.index(of:sender){
             game.chooseCard(at: cardNumber)
@@ -44,18 +45,25 @@ class ViewController: UIViewController
         }
     }
     
-    var emojiChoices = [ "🎃", "👻", "🎃", "👻" , "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
-    var emoji = [Int: String]()
-    func emoji(for card: Card)-> String {
+    private var emojiChoices = [ "🎃", "👻", "🙀", "👻" , "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
+    private var emoji = [Int: String]()
+    private func emoji(for card: Card)-> String {
         if emoji[card.identifier] == nil,  emojiChoices.count > 0 {
-            let randomIndex =  Int(arc4random_uniform(UInt32(emojiChoices.count)))
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+            emoji[card.identifier] = emojiChoices.remove(at: emojiChoices.count.arc4random)
         }
-        return emojiChoices[card.identifier]  ?? "?"
+        return emoji[card.identifier]  ?? "?"
     }
-    
-    
-    
-    
-    
+}
+
+extension Int {
+    var  arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
+        
+    }
 }
