@@ -10,22 +10,19 @@ import Foundation
 
 
 
-
-
 struct Concentration
 {
+    
     private(set) var cards = [Card]()
     
     init(numberOfPairsOfCards: Int ) {
         for _ in 1...numberOfPairsOfCards {
             let card = Card()
-            cards += [ card, card]
+            cards += [ card, card ]
         }
     }
-    
     private  var indexOfOneAndOnlyFaceUpCard: Int? {
         get {
-            
             return cards.indices.filter { cards[$0].isFaceUp }.oneAndOnly
         }
         set {
@@ -36,6 +33,7 @@ struct Concentration
     }
     //MARk - Game Functions
     mutating func chooseCard(at index: Int) {
+        
         if  !cards[index].isMatched {
             if let matchedIndex =  indexOfOneAndOnlyFaceUpCard, matchedIndex != index {
                 // check if the card matched

@@ -17,9 +17,11 @@ class ViewController: UIViewController
     }
     
     fileprivate func updateFlipCountLabel() {
+        
         let attributes:  [NSAttributedStringKey: Any ] = [ .strokeWidth: 5.0, .strokeColor: UIColor.orange ]
         let attributtedString = NSAttributedString(string: "Flips:\(flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributtedString
+        
     }
     
     var flipCount = 0 {
@@ -27,7 +29,6 @@ class ViewController: UIViewController
         {
             updateFlipCountLabel()
         }
-        
     }
     @IBOutlet var cardButtons: [UIButton]!
     
@@ -60,8 +61,7 @@ class ViewController: UIViewController
             }
         }
     }
-    
-    private var emojiChoices = [ "🎃", "👻", "🙀", "👻" , "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
+private var emojiChoices = [ "🎃", "👻", "🙀", "👻", "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
     private var emoji = [Card: String]()
     private func emoji(for card: Card)-> String {
         if emoji[card] == nil,  emojiChoices.count > 0 {
@@ -70,9 +70,6 @@ class ViewController: UIViewController
         }
         return emoji[card]  ?? "?"
     }
-    
-    
-  
 }
 
 extension Int {
