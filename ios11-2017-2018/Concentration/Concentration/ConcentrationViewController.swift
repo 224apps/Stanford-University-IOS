@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class ConcentrationViewController: UIViewController
 {
     private lazy var game = Concentration(numberOfPairsOfCards: numberOfPairedCards )
     
@@ -18,7 +18,7 @@ class ViewController: UIViewController
     
     fileprivate func updateFlipCountLabel() {
         
-        let attributes:  [NSAttributedStringKey: Any ] = [ .strokeWidth: 5.0, .strokeColor: UIColor.orange ]
+        let attributes:  [NSAttributedStringKey: Any ] = [ .strokeWidth: 5.0, .strokeColor: UIColor.black]
         let attributtedString = NSAttributedString(string: "Flips:\(flipCount)", attributes: attributes)
         flipCountLabel.attributedText = attributtedString
         
@@ -49,19 +49,29 @@ class ViewController: UIViewController
     }
     
     func updateViewFromModel(){
-        for index in cardButtons.indices {
-            let button = cardButtons[index]
-            let card = game.cards[index]
-            if card.isFaceUp  {
-                button.setTitle(emoji(for: card), for: .normal)
-                button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-            } else {
-                button.setTitle("", for: .normal)
-                button.backgroundColor =  card.isMatched ?  #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0) : #colorLiteral(red: 1, green: 0.5843137255, blue: 0, alpha: 1)
+        if cardButtons != nil {
+            for index in cardButtons.indices {
+                let button = cardButtons[index]
+                let card = game.cards[index]
+                if card.isFaceUp  {
+                    button.setTitle(emoji(for: card), for: .normal)
+                    button.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+                } else {
+                    button.setTitle("", for: .normal)
+                    button.backgroundColor =  card.isMatched ?  #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 0) : #colorLiteral(red: 0, green: 0.4784313725, blue: 1, alpha: 1)
+                }
             }
         }
     }
-private var emojiChoices = [ "🎃", "👻", "🙀", "👻", "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
+    
+    var theme: String? {
+        didSet{
+            emojiChoices =  [theme ?? "" ]
+            emoji = [:]
+            updateViewFromModel()
+        }
+    }
+    private var emojiChoices = [ "🎃", "👻", "🙀", "👻", "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
     private var emoji = [Card: String]()
     private func emoji(for card: Card)-> String {
         if emoji[card] == nil,  emojiChoices.count > 0 {

@@ -29,6 +29,14 @@ class PlayingCardView: UIView {
         }
     }
     
+    @objc func  screenpan(recognizer: UIScreenEdgePanGestureRecognizer) {
+        switch recognizer.state {
+        case .changed:
+             print( " screenPan Gesture")
+
+        default: break
+        }
+    }
     private func centeredAttributedString(_ string: String, fontSize: CGFloat) -> NSAttributedString {
         var font = UIFont.preferredFont(forTextStyle: .body).withSize(fontSize)
         font = UIFontMetrics(forTextStyle: .body).scaledFont(for: font)
@@ -187,12 +195,10 @@ extension CGRect {
         let originY = origin.y + (size.height - zoomedHeight) / 2
         return CGRect(origin: CGPoint(x: originX,y: originY) , size: CGSize(width: zoomedWidth, height: zoomedHeight))
     }
-    
     var leftHalf: CGRect {
         let width = size.width / 2
         return CGRect(origin: origin, size: CGSize(width: width, height: size.height))
     }
-    
     var rightHalf: CGRect {
         let width = size.width / 2
         return CGRect(origin: CGPoint(x: origin.x + width, y: origin.y), size: CGSize(width: width, height: size.height))
