@@ -8,7 +8,10 @@
 
 import UIKit
 
+
 @IBDesignable
+
+
 class PlayingCardView: UIView {
     
     @IBInspectable
@@ -41,6 +44,7 @@ class PlayingCardView: UIView {
         return centeredAttributedString(rankString+"\n"+suit, fontSize: cornerFontSize)
     }
     
+
     private lazy var upperLeftCornerLabel = createCornerLabel()
     private lazy var lowerRightCornerLabel = createCornerLabel()
     
