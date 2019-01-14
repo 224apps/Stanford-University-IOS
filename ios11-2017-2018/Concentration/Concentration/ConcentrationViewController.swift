@@ -16,6 +16,7 @@ class ConcentrationViewController: UIViewController
         return (cardButtons.count + 1) / 2
     }
     
+    
     fileprivate func updateFlipCountLabel() {
         
         let attributes:  [NSAttributedStringKey: Any ] = [ .strokeWidth: 5.0, .strokeColor: UIColor.black]
@@ -71,8 +72,10 @@ class ConcentrationViewController: UIViewController
             updateViewFromModel()
         }
     }
+    
     private var emojiChoices = [ "🎃", "👻", "🙀", "👻", "😈", "🐎", "👺" , "👹", "💀", "☠️", "⚰️" ]
     private var emoji = [Card: String]()
+    
     private func emoji(for card: Card)-> String {
         if emoji[card] == nil,  emojiChoices.count > 0 {
             let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random)

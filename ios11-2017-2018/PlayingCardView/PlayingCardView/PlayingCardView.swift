@@ -11,7 +11,6 @@ import UIKit
 
 @IBDesignable
 
-
 class PlayingCardView: UIView {
     
     @IBInspectable

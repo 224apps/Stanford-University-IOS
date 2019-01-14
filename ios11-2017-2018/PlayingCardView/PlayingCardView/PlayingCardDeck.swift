@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import CoreGraphics
 struct PlayingCardDeck
 {
     private(set) var cards = [PlayingCard]()
@@ -36,6 +36,18 @@ extension Int {
             return Int(arc4random_uniform(UInt32(self)))
         } else if self < 0 {
             return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
+        
+    }
+}
+extension Float {
+    var  arc4random: Float {
+        if self > 0 {
+            return Float(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Float(arc4random_uniform(UInt32(abs(self))))
         } else {
             return 0
         }

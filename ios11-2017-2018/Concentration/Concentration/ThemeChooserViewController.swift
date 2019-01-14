@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConcentrationThemeChooserViewController: UIViewController {
+class ThemeChooserViewController: UIViewController {
     
     // MARK: - Navigation
     let themes = [
